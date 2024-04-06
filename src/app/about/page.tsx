@@ -1,4 +1,11 @@
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "about",
+  description: "...",
+};
+
 const About = () => {
   const username = "闪的鸣";
   const description = "我是一名软件工程师在小米";

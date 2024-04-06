@@ -1,4 +1,10 @@
+import { Metadata } from "next";
 import AllPostsPreview from "../components/AllPostsPreview";
+
+export const metadata: Metadata = {
+  title: "blog",
+  description: "...",
+};
 
 const Blog = () => {
   return (

@@ -1,6 +1,13 @@
 import getPostMetadata from "@/lib/getPostMetadata";
 import fs from "fs";
 import Markdown from "markdown-to-jsx";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "blog-xx",
+  description: "...",
+};
+
 const getPostContent = (slug: string) => {
   const folder = "posts/";
   const file = `${folder}${slug}.md`;

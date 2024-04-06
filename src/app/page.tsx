@@ -1,6 +1,10 @@
-import Link from "next/link";
-import getPostMetadata from "@/lib/getPostMetadata";
+import { Metadata } from "next";
 import AllPostsPreview from "./components/AllPostsPreview";
+
+export const metadata: Metadata = {
+  title: "Home",
+  description: "...",
+};
 
 export default function Home() {
   return (
