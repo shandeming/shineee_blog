@@ -1,27 +1,17 @@
-import fs from "fs";
 import Link from "next/link";
-
-const getPostMetadata = () => {
-  const folder = "posts/";
-  const files = fs.readdirSync(folder);
-  const markdownPosts = files.filter((file) => file.endsWith(".md"));
-  const slugs = markdownPosts.map((file) => file.replace(".md", ""));
-  return slugs;
-};
+import getPostMetadata from "@/lib/getPostMetadata";
+import AllPostsPreview from "./components/AllPostsPreview";
 
 export default function Home() {
-  const postMetadata = getPostMetadata();
-  const postPreviews = postMetadata.map((slug) => (
-    <div key={slug} className="py-5 text-3xl">
-      <Link href={`/blog/${slug}`}>
-        <span className="text-blue-500">{slug}</span>
-      </Link>
-    </div>
-  ));
   return (
-    <div>
-      <h1 className="text-5xl font-bold	border-b-2 pb-4">最新文章</h1>
-      <div className="grid grid-cols-1 divide-y">{postPreviews}</div>
-    </div>
+    <>
+      <div className="border-b-2 pb-4">
+        <h1 className="text-5xl font-bold">最新文章</h1>
+        <h4 className="pt-3">分享作为软件工程师的成长历程</h4>
+      </div>
+      <div className="grid grid-cols-1 divide-y">
+        <AllPostsPreview></AllPostsPreview>
+      </div>
+    </>
   );
 }

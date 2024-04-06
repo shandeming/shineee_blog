@@ -1,7 +1,8 @@
 ---
 title: 测试驱动开发模式
-description: This is the first article.
-date: 2020-10-01
+date: "2023-2-23"
+description: 测试驱动开发模式的操作步骤
+tags: ["pattern"]
 ---
 
 
