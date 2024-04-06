@@ -1,3 +1,4 @@
+import getPostMetadata from "@/lib/getPostMetadata";
 import fs from "fs";
 import Markdown from "markdown-to-jsx";
 const getPostContent = (slug: string) => {
@@ -6,7 +7,12 @@ const getPostContent = (slug: string) => {
   const content = fs.readFileSync(file, "utf-8");
   return content;
 };
-
+export const generateStaticParams = async () => {
+  const posts = getPostMetadata();
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+  }));
+};
 const Blog = ({ params }: { params: { slug: string } }) => {
   const slug = params.slug;
   const encodedString = decodeURIComponent(slug);

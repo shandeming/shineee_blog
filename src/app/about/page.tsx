@@ -29,9 +29,10 @@ const About = () => {
             <li>
               skill:
               <ul className="list-disc ml-10 mt-2">
-                {skills.map((skill) => (
-                  <li key={skill}>{skill.toUpperCase()}</li>
-                ))}
+                <li>
+                  熟悉：C#/Python/Golang/ASP.NET Core/MySQL/Web API/EF Core/Git/
+                </li>
+                <li>了解：Html/CSS/JS/WPF/Redis/MongoDB/React/Docker/Rust</li>
               </ul>
             </li>
           </ul>
