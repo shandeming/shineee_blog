@@ -10,11 +10,11 @@ const getPostContent = (slug: string) => {
 export const generateStaticParams = async () => {
   const posts = getPostMetadata();
   return posts.map((post) => ({
-    params: { slug: post.slug },
+    slug: post.slug,
   }));
 };
-const Blog = ({ params }: { params: { slug: string } }) => {
-  const slug = params.slug;
+const Blog = (props: any) => {
+  const slug = props.params.slug;
   const encodedString = decodeURIComponent(slug);
   console.log(encodedString);
   const content = getPostContent(encodedString);
