@@ -2,7 +2,7 @@
 title: Garbage Collection in C#
 date: "2024-4-6"
 description: 关于C#里的generation Heap的gc原理
-tags: ["C#"]
+tags: ["CSharp"]
 ---
 
 

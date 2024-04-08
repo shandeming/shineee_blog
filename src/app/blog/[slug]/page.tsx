@@ -23,7 +23,6 @@ export const generateStaticParams = async () => {
 const Blog = (props: any) => {
   const slug = props.params.slug;
   const encodedString = decodeURIComponent(slug);
-  console.log(encodedString);
   const content = getPostContent(encodedString);
   return (
     <div className="prose">
