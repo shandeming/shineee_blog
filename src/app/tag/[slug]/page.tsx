@@ -1,9 +1,12 @@
 import getPostMetadata from "@/lib/getPostMetadata";
 
 export const generateStaticParams = async () => {
-  const posts = getPostMetadata();
-  return posts.map((post) => ({
-    slug: post.slug,
+  const tags = getPostMetadata()
+    .map((post) => post.tags)
+    .flat()
+    .filter((tag, index, self) => self.indexOf(tag) === index);
+  return tags.map((tag) => ({
+    slug: tag,
   }));
 };
 const Tag = (props: any) => {
