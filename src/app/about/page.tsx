@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 const About = () => {
   const username = "闪的鸣";
-  const description = "我是一名软件工程师在小米";
+  const description = "I am a software engineer in XiaoMI";
   const skills = ["c#", "python", "rust", "go"];
   return (
     <div className="divide-y">
