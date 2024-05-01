@@ -1,9 +1,9 @@
 {
-  "name": "my-app",
+  "name": "shineee_blog",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 12222",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

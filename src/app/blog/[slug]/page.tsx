@@ -25,10 +25,10 @@ const Blog = (props: any) => {
   const encodedString = decodeURIComponent(slug);
   const content = getPostContent(encodedString);
   return (
-    <div className="prose">
+    <article className="prose">
       <h1>{encodedString}</h1>
       <Markdown>{content}</Markdown>
-    </div>
+    </article>
   );
 };
 export default Blog;
