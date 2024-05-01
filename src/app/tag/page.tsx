@@ -10,15 +10,18 @@ const Tag = () => {
       <div className="border-b-2 pb-4">
         <h1 className="text-5xl font-bold">Tags</h1>
       </div>
-      <div className="prose">
-        <ul className="inline">
+      <span className="flex justify-center mt-4">
+        <ul className="flex flex-wrap max-w-lg">
           {tags.map((tag) => (
-            <li key={tag}>
+            <li
+              key={tag}
+              className="px-2 text-violet-600 hover:text-violet-800"
+            >
               <a href={`/tag/${tag}`}>{tag}</a>
             </li>
           ))}
         </ul>
-      </div>
+      </span>
     </>
   );
 };
